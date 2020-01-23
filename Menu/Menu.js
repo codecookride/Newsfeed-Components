@@ -33,3 +33,37 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+const hamburg = (menuArray)=> {
+
+
+  
+  const menu = document.createElement('div');
+  const UL = document.createElement('ul');
+   
+
+  menu.appendChild(UL);
+  
+  menu.classList.add('menu');
+ 
+  
+  menuArray.forEach(item => {
+    const listItem = document.createElement('li');
+    UL.appendChild(listItem);
+     listItem.append(item);
+  });
+
+ 
+  menew.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+  });
+ 
+  return menu;
+}
+
+
+
+  const menew = document.querySelector('.header');
+
+  menew.appendChild(hamburg(menuItems));
+ 
+
